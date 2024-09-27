@@ -27,4 +27,5 @@ La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizan
    source venv/bin/activate  # Linux/Mac
 ## ejecutar interfaz 
 ## ____________________________
-1. python main.py en la terminal o la consola 
+1. instala la carpeta pip install pycryptodome
+2. python main.py en la terminal o la consola
