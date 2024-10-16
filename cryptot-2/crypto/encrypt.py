@@ -45,7 +45,7 @@ def format_output(data, format_type):
         return base64.b64encode(data).decode('utf-8')
     elif format_type == 'Hexadecimal':
         return data.hex()
-    elif format_type == 'Binary':
+    elif format_type == 'Binary' or format_type == 'Binario':  # Acepta ambos
         return ''.join(format(byte, '08b') for byte in data)
     elif format_type == 'Decimal':
         return ' '.join(str(byte) for byte in data)
@@ -79,12 +79,20 @@ def main():
             # Generate a random key
             key = os.urandom(key_length)
 
-            # Select the output format
-            format_type = input("Select the output format (Base64, Hexadecimal, Binary, Decimal, Octal): ")
-
             # Encrypt
             encrypted_message = encrypt_message(message, key)
-            print(f'Encrypted Message: {encrypted_message}')  # Display the encrypted message directly
+            print(f'Encrypted Message (Base64): {encrypted_message}')  # Display the encrypted message in Base64
+            
+            # Convert encrypted message to bytes for formatting
+            encrypted_message_bytes = base64.b64decode(encrypted_message)
+            
+            # Select the output format
+            format_type = input("Select the output format (Base64, Hexadecimal, Binary, Decimal, Octal): ")
+            
+            # Format the encrypted message as requested
+            formatted_message = format_output(encrypted_message_bytes, format_type)
+            print(f'Encrypted Message ({format_type}): {formatted_message}')  # Display in the requested format
+            
             # Show the key in base64 for later use
             print(f'Key used (base64): {base64.b64encode(key).decode("utf-8")}')
 
@@ -110,14 +118,13 @@ def main():
             try:
                 # Try to decode as base64 to validate
                 encrypted_message = base64.b64decode(encrypted_message)
-                # If using another format, this block can be adjusted
             except Exception as e:
                 print(f"Error decoding the encrypted message: {str(e)}")
                 continue
 
             # Decrypt
             try:
-                decrypted_message = decrypt_message(base64.b64encode(encrypted_message).decode('utf-8'), key)  # Convert back to base64 for passing to the function
+                decrypted_message = decrypt_message(base64.b64encode(encrypted_message).decode('utf-8'), key)
                 print(f'Decrypted Message: {decrypted_message}')
             except Exception as e:
                 print(f'Error decrypting: {str(e)}')
@@ -127,3 +134,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
