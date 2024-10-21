@@ -4,7 +4,8 @@ Este proyecto es una aplicación de escritorio que permite encriptar y desencrip
 
 ## Autor
 ## ____________________________
-Santiago Cano Ocampo
+Anderson Monsalve Monsalve 
+Juan Felipe Ruiz Yepes
 
 ## Descripción
 ## ____________________________
@@ -24,10 +25,9 @@ La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizan
 2. Asegúrate de tener Python 3.9.13 instalado en tu sistema.
 3. Crea un entorno virtual y activa el entorno:
    ```bash
-   python -m venv venv
-   venv\Scripts\activate  # Windows
-   source venv/bin/activate  # Linux/Mac
-## ejecutar interfaz 
-## ____________________________
-1. instala la carpeta pip install pycryptodome
-2. python main.py en la terminal o la consola
+   
+Instala las dependencias necesarias:
+pip install kivy 
+pip install cryptography
+python aes_encryption.py
+pip install pycryptodome
