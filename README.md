@@ -25,10 +25,13 @@ La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizan
 1. Clona este repositorio o descarga el código fuente.
 2. Asegúrate de tener Python 3.9.13 instalado en tu sistema.
 3. Crea un entorno virtual y activa el entorno:
-   ```bash
    
-Instala las dependencias necesarias:
+## Instala las dependencias necesarias:
+
 pip install kivy 
+
 pip install cryptography
+
 python aes_encryption.py
+
 pip install pycryptodome
