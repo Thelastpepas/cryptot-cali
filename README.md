@@ -43,28 +43,29 @@ La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizan
 - os
 - ryptography
 - base64
+- 
 How to Run the Project
 Step 1: Clone the repository
 Clone this repository to your local machine using
- # 1. Clona el repositorio del proyecto:
+
 git clone https://github.com/your-username/cryptot.git
 
-# 2. Navega al directorio principal del proyecto:
+
 cd cryptot
 
-# 3. Accede a la carpeta src/view:
+
 cd src/view
 
-# 4. Ejecuta el archivo consola.py:
+
 python consola.py
 
-# 5. Ejecuta las pruebas unitarias (opcional):
+
 python -m unittest test.controllertest
 
-# 6. Ejecuta el controlador de la consola:
+
 python src/view/consolacontrolador.py
 
-# 7. Ejecuta el archivo kivy_test.py en la carpeta Gui:
+
 python src/model/Gui/kivy_test.py
 
 
