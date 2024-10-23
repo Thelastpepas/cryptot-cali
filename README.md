@@ -127,11 +127,6 @@ ____________________________
    python src/view/consolacontrolador.py
    ```
 
-6. Run the `kivy_test.py` file from the `Gui` folder:
-
-   ```bash
-   python src/model/Gui/kivy_test.py
-   ```
 
 ## Database Configuration
 ____________________________  
