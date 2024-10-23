@@ -5,6 +5,7 @@ Este proyecto es una aplicación de escritorio que permite encriptar y desencrip
 ## Autor
 ## ____________________________
 -Anderson Monsalve Monsalve 
+
 -Juan Felipe Ruiz Yepes
 ## Descripción
 ## ____________________________
