@@ -16,7 +16,10 @@ La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizan
 - Kivy 2.3.0
 - Dependencias de Kivy: kivy-deps.angle, kivy-deps.glew, kivy-deps.gstreamer, kivy-deps.sdl2
 - pip install pycryptodome
-
+- Python 3.9.13
+- pip install kivy 
+- pip install cryptography
+- python aes_encryption.py
 
 ## Instalación
 ## ____________________________
