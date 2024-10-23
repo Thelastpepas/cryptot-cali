@@ -4,8 +4,8 @@ Este proyecto es una aplicación de escritorio que permite encriptar y desencrip
 
 ## Autor
 ## ____________________________
-Santiago Cano Ocampo
-
+-Anderson Monsalve Monsalve 
+-Juan Felipe Ruiz Yepes
 ## Descripción
 ## ____________________________
 La aplicación permite a los usuarios encriptar y desencriptar mensajes utilizando una clave criptográfica. Los algoritmos disponibles para la encriptación son: Twofish, Serpent, AES (Rijndael), Camellia, Salsa20, ChaCha20, Blowfish, CAST5, Kuznyechik, RC4, DES, 3DES, Skipjack, Safer e IDEA.
