@@ -1,8 +1,10 @@
 # Message Encryption and Decryption
 ____________________________  
 This project is a desktop application that allows encrypting and decrypting messages using symmetric cryptographic algorithms. It is developed in Python using the Kivy framework for the graphical user interface (GUI).
+## Previous Author
+Santiago Cano 
 
-## Authors
+## Current authors
 ____________________________  
 - Anderson Monsalve Monsalve  
 - Juan Felipe Ruiz Yepes  
