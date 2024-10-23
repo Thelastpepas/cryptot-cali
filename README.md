@@ -2,7 +2,8 @@
 ____________________________  
 This project is a desktop application that allows encrypting and decrypting messages using symmetric cryptographic algorithms. It is developed in Python using the Kivy framework for the graphical user interface (GUI).
 ## Previous Author
-Santiago Cano 
+Santiago Cano Ocampo
+
 
 ## Current authors
 ____________________________  
