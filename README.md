@@ -2,7 +2,7 @@
 ## ____________________________
 Este proyecto es una aplicación de escritorio que permite encriptar y desencriptar mensajes utilizando algoritmos criptográficos simétricos. Está desarrollada en Python usando el framework Kivy para la interfaz gráfica de usuario (GUI).
 
-## Autor
+## Autores
 ## ____________________________
 -Anderson Monsalve Monsalve 
 
