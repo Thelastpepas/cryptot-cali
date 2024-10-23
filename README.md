@@ -92,42 +92,11 @@ Install the following libraries for database operations:
 ## How to Run the Project
 ____________________________  
 
-**Step 1:** Clone this repository to your local machine using:
-
-
-
-
-1. Navigate to the project directory:
-
-   ```bash
-   cd cryptot
-   ```
-
-2. Go to the `src/view` folder:
-
-   ```bash
-   cd src/view
-   ```
-
-3. Run the `app.py` script:
-
-   ```bash
-   python app.py 
-   ```
-
-4. Run the unit tests:
-
-   ```bash
-   python -m unittest test.controllertest
-   ```
-
-5. Run the console controller:
-
-   ```bash
-   python src/view/consolacontrolador.py
-   ```
-
-
+To run this folder, you must first open
+the test cases use test/tes_crypto.py
+for the console it is in the main folder, and you put app.py
+the database test is executed through the main folder test_BD.py
+for the graphical interface it is in src/view/crypto.py
 ## Database Configuration
 ____________________________  
 Update your database credentials in the `SecretConfig` folder:
