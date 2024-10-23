@@ -1,6 +1,3 @@
-Aquí tienes el contenido listo para pegarlo en tu archivo `README.md` en GitHub:
-
----
 
 # Message Encryption and Decryption
 ____________________________  
