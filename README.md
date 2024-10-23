@@ -94,9 +94,8 @@ ____________________________
 
 **Step 1:** Clone this repository to your local machine using:
 
-```bash
-git clone https://github.com/your-username/cryptot.git
-```
+
+
 
 1. Navigate to the project directory:
 
@@ -110,10 +109,10 @@ git clone https://github.com/your-username/cryptot.git
    cd src/view
    ```
 
-3. Run the `consola.py` script:
+3. Run the `app.py` script:
 
    ```bash
-   python consola.py
+   python app.py 
    ```
 
 4. Run the unit tests:
