@@ -19,7 +19,6 @@ ____________________________
 - Python 3.9.13  
 - Kivy 2.3.0  
 - Kivy dependencies: `kivy-deps.angle`, `kivy-deps.glew`, `kivy-deps.gstreamer`, `kivy-deps.sdl2`  
-- Install `pycryptodome`:
 
   ```bash
   pip install pycryptodome
@@ -82,8 +81,9 @@ ____________________________
 ## Database Setup
 ____________________________  
 Install the following libraries for database operations:  
-pip install psycopg2 sys os base64
-
+```bash
+  pip install psycopg2 sys os base64
+   ```
 ## How to Run the Project
 ____________________________  
 
