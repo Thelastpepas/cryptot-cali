@@ -82,12 +82,7 @@ ____________________________
 ## Database Setup
 ____________________________  
 Install the following libraries for database operations:  
-
-- `psycopg2`  
-- `sys`  
-- `os`  
-- `cryptography`  
-- `base64`  
+pip install psycopg2 sys os base64
 
 ## How to Run the Project
 ____________________________  
