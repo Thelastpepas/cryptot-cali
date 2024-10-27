@@ -106,28 +106,27 @@ python src/view/criptop.py
 
    ```
 
-## base de datos
-# instalar las siguientes librerias:
+## database
+# install the following libraries:
 - psycopg2
 - sys
 - os
 - ryptography
 - base64
 
-
-## coloca tus datos de tu base de datos en la carpeta secretconfig:
+## place your database data in the secretconfig folder:
 PGHOST='******
 PGDATABASE=*****
 PGUSER=****
 PGPASSWORD=****
 
-## ejecucion
+## execution
 
-una vez echo lo anterior ejecutar el modulo app.py 
-ya sea desde el cmd o visual code 
-si es desde el cmd se recomienda ponerla en escritorio y acceder a la carpeta con el comando cd 
+once you have done the above, run the app.py module
+either from the cmd or visual code
+if it is from the cmd, it is recommended to put it on the desktop and access the folder with the cd command
 
-una vez echo lo anterior ejecutar el modulo app.py 
-ya sea desde el cmd o visual code 
-si es desde el cmd se recomienda ponerla en escritorio y acceder a la carpeta con el comando cd 
+once you have done the above, run the app.py module
+either from the cmd or visual code
+if it is from the cmd, it is recommended to put it on the desktop and access the folder with the cd command
 
