@@ -18,7 +18,6 @@ The application allows users to encrypt and decrypt messages using a cryptograph
 ____________________________  
 - Python 3.9.13  
 - Kivy 2.3.0  
-- Kivy dependencies: `kivy-deps.angle`, `kivy-deps.glew`, `kivy-deps.gstreamer`, `kivy-deps.sdl2`  
 
   ```bash
   pip install pycryptodome
