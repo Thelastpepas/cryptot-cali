@@ -93,13 +93,13 @@ test_BD.py
  ```bash
  test_crypto.py,
 ```
-## use this to add your database
+- use this to add your database
 
 ```bash
 src/controller/SecretConfig.py
 
    ```
--si vas a utilizar por interfaz sería
+- If you are going to use the interface
 
   ```bash
 python src/view/criptop.py
