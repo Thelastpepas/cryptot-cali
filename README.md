@@ -101,10 +101,9 @@ src/controller/SecretConfig.py
    ```
 - If you are going to use the interface
 
-  ```bash
+```bash
 python src/view/criptop.py
-
-   ```
+ ```
 
 ## database
 # install the following libraries:
