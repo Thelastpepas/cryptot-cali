@@ -74,41 +74,29 @@ ____________________________
 2. Run the main module:
 
    ```bash
-   python main.py
+   python app.py
    ```
 
-## Database Setup
-____________________________  
-Install the following libraries for database operations:  
-```bash
-  pip install psycopg2 sys os base64
-   ```
-## How to Run the Project
-____________________________  
+## base de datos
+# instalar las siguientes librerias:
+- psycopg2
+- sys
+- os
+- ryptography
+- base64
 
-To run this folder, you must first open
-the test cases use test/tes_crypto.py
-for the console it is in the main folder, and you put app.py
-the database test is executed through the main folder test_BD.py
-for the graphical interface it is in src/view/crypto.py
-## Database Configuration
-____________________________  
-Update your database credentials in the `SecretConfig` folder:
 
-```plaintext
-PGHOST='******'
-PGDATABASE='*****'
-PGUSER='****'
-PGPASSWORD='****'
-```
+## coloca tus datos de tu base de datos en la carpeta secretconfig:
+PGHOST='******
+PGDATABASE=*****
+PGUSER=****
+PGPASSWORD=****
 
-## Execution
-____________________________  
-Once you've completed the previous steps, execute the `app.py` module either from the command line or using Visual Studio Code. If you are running it from the command line, it is recommended to place the project folder on your desktop, navigate to the directory using:
+## ejecucion
 
-```bash
-cd [project folder path]
-```
+una vez echo lo anterior ejecutar el modulo app.py 
+ya sea desde el cmd o visual code 
+si es desde el cmd se recomienda ponerla en escritorio y acceder a la carpeta con el comando cd 
 
 una vez echo lo anterior ejecutar el modulo app.py 
 ya sea desde el cmd o visual code 
