@@ -77,6 +77,32 @@ ____________________________
    python app.py
    ```
 
+## Steps to run the code by cmd
+- For the console we use
+```bash
+python src/view/app.py
+```
+- To run all tests in the test folder, use this command, it will find and run all test files, such as
+  ```bash
+  python -m unittest discover -s test
+
+   ```
+-  test_BD.py
+-  test_crypto.py,
+-  in the test folder
+## use this to add your database
+
+```bash
+src/controller/SecretConfig.py
+
+   ```
+-si vas a utilizar por interfaz sería
+
+  ```bash
+python src/view/criptop.py
+
+   ```
+
 ## base de datos
 # instalar las siguientes librerias:
 - psycopg2
