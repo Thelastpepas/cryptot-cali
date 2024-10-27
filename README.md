@@ -87,11 +87,9 @@ python src/view/app.py
   python -m unittest discover -s test
 
    ```
-
 ```bash
 test_BD.py
 ```
- test_crypto.py,
  ```bash
  test_crypto.py,
 ```
