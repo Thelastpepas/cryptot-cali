@@ -82,14 +82,19 @@ ____________________________
 ```bash
 python src/view/app.py
 ```
-- To run all tests in the test folder, use this command, it will find and run all test files, such as
+- To run all tests in the test folder, use this command, it will find and run all test files
   ```bash
   python -m unittest discover -s test
 
    ```
--  test_BD.py
--  test_crypto.py,
--  in the test folder
+
+```bash
+test_BD.py
+```
+ test_crypto.py,
+ ```bash
+ test_crypto.py,
+```
 ## use this to add your database
 
 ```bash
