@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>Encriptar Mensaje</h2>
+    <form action="{{ url_for('encryption') }}" method="post">
+        <div>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <div>
+            <label for="key_length">Longitud de la Clave (16, 24, 32):</label>
+            <select id="key_length" name="key_length" required>
+                <option value="16">16</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+            </select>
+        </div>
+        <div>
+            <label for="format_type">Formato de Salida:</label>
+            <select id="format_type" name="format_type" required>
+                <option value="1">Base64</option>
+                <option value="2">Hexadecimal</option>
+                <option value="3">Binario</option>
+                <option value="4">Decimal</option>
+                <option value="5">Octal</option>
+            </select>
+        </div>
+        <button type="submit">Encriptar</button>
+    </form>
+
+    {% if encrypted_message %}
+        <h3>Mensaje Encriptado:</h3>
+        <p>{{ encrypted_message }}</p>
+        <p>Clave Utilizada (Base64): {{ key_b64 }}</p>
+    {% endif %}
+
+    <!-- Enlace para "Volver al inicio" -->
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+
+</html>

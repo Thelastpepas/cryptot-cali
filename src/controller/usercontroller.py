@@ -1,28 +1,20 @@
+# src/controller/usercontroller.py
 
 from src.controller.users import User, insert_user, search_user_by_id, update_user, delete_user
 
-def create_new_user():
-    firstname = input("Ingresa el nombre: ")
-    surname = input("Ingresa el apellido: ")
-    idnumber = input("Ingresa el número de identificación: ")
-    mail = input("Ingresa el correo electrónico: ")
-    
+def create_new_user_web(firstname, surname, idnumber, mail):
     user = User(firstname, surname, idnumber, mail)
-    insert_user(user)
+    return insert_user(user)
 
-def search_user():
-    idnumber = input("Ingresa el número de identificación: ")
-    search_user_by_id(idnumber)
+def search_user(idnumber):
+    return search_user_by_id(idnumber)
 
-def update_user_info():
-    idnumber = input("Ingresa el número de identificación: ")
-    firstname = input("Ingresa el nuevo nombre (deja en blanco para no cambiar): ")
-    surname = input("Ingresa el nuevo apellido (deja en blanco para no cambiar): ")
-    mail = input("Ingresa el nuevo correo electrónico (deja en blanco para no cambiar): ")
-    
+# src/controller/usercontroller.py
+def update_user_info_web(firstname, surname, idnumber, mail):
     user = User(firstname, surname, idnumber, mail)
-    update_user(user)
+    return update_user(user)  # Asegúrate de que update_user reciba un objeto User
 
-def delete_existing_user():
-    idnumber = input("Ingresa el número de identificación: ")
-    delete_user(idnumber)
+
+def delete_existing_user(idnumber):
+    return delete_user(idnumber)  # Retorna el resultado de la función delete_user
+

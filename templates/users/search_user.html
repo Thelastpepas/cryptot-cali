@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>Buscar Usuario</h2>
+    <form action="{{ url_for('search_user') }}" method="post">
+        <div>
+            <label for="idnumber">Número de Identificación:</label>
+            <input type="text" id="idnumber" name="idnumber" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if user %}
+        <h3>Usuario Encontrado:</h3>
+        <p>Nombre: {{ user.firstname }}</p>
+        <p>Apellido: {{ user.surname }}</p>
+        <p>ID: {{ user.idnumber }}</p>
+        <p>Email: {{ user.mail }}</p>
+    {% elif searched %}
+        <p>Usuario no encontrado.</p>
+    {% endif %}
+
+    <!-- Enlace para "Volver al inicio" -->
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+
+</html>

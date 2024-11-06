@@ -1,3 +1,4 @@
+#controller/users.py
 import psycopg2
 import sys
 sys.path.append("src")
@@ -27,7 +28,7 @@ def conectar_a_base_datos():
             user=PGUSER,
             password=PGPASSWORD
         )
-        print("Conexión exitosa a la base de datos")
+        
         return conexion
     except Exception as e:
         print(f"Error al conectar a la base de datos: {e}")
@@ -50,7 +51,7 @@ def crear_tabla_users():
         """
         cursor.execute(create_table_query)
         connection.commit()
-        print("Tabla 'users' creada exitosamente o ya existe.")
+    
     except Exception as e:
         print("Error creando la tabla 'users':", e)
     finally:
@@ -85,49 +86,59 @@ def insert_user(user):
         if connection:
             connection.close()
 
-def update_user(user):
+# src/controller/users.py
+def update_user(firstname, surname, idnumber, mail):
     try:
         connection = conectar_a_base_datos()
         if connection is None:
-            return
+            return False
         cursor = connection.cursor()
         update_query = """
         UPDATE users 
         SET firstname = %s, surname = %s, mail = %s
         WHERE idnumber = %s;
         """
-        cursor.execute(update_query, (user.firstname, user.surname, user.mail, user.idnumber))
+        cursor.execute(update_query, (firstname, surname, mail, idnumber))
         connection.commit()
         if cursor.rowcount > 0:
             print("Usuario actualizado exitosamente.")
+            return True
         else:
             print("Usuario no encontrado.")
+            return False
     except Exception as e:
         print("Error actualizando usuario:", e)
+        return False
     finally:
-        cursor.close()
-        connection.close()
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
 
 
 def delete_user(idnumber):
     try:
         connection = conectar_a_base_datos()
         if connection is None:
-            return
+            return False  # Retorna False si la conexión falla
         cursor = connection.cursor()
         delete_query = "DELETE FROM users WHERE idnumber = %s;"
         cursor.execute(delete_query, (idnumber,))
         connection.commit()
         if cursor.rowcount > 0:
             print("Usuario eliminado exitosamente.")
+            return True  # Retorna True si el usuario fue eliminado
         else:
             print("Usuario no encontrado.")
+            return False  # Retorna False si el usuario no fue encontrado
     except Exception as e:
         print("Error eliminando usuario:", e)
+        return False  # Retorna False si hubo un error
     finally:
-        cursor.close()
-        connection.close()
-
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
 
 def search_user_by_id(idnumber):
     try:
@@ -154,12 +165,11 @@ def search_user_by_id(idnumber):
         if connection:
             connection.close()
 
-
 def search_user_by_name(firstname, surname):
     try:
         connection = conectar_a_base_datos()
         if connection is None:
-            return
+            return None
         cursor = connection.cursor()
         search_query = "SELECT * FROM users WHERE firstname = %s AND surname = %s;"
         cursor.execute(search_query, (firstname, surname))
@@ -167,14 +177,18 @@ def search_user_by_name(firstname, surname):
         if result:
             user = User(result[1], result[2], result[3], result[4])
             print(f"Usuario encontrado: {user.firstname} {user.surname}, ID: {user.idnumber}, Email: {user.mail}")
+            return user
         else:
             print("Usuario no encontrado.")
+            return None
     except Exception as e:
         print("Error buscando usuario:", e)
+        return None
     finally:
-        cursor.close()
-        connection.close()
-    return user if result else None
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
 
 # Función para pedir los datos por consola
 def pedir_datos_usuario():
@@ -191,5 +205,5 @@ def pedir_datos_usuario():
     
     return usuario_nuevo
 
-
+# Crear la tabla de usuarios al cargar el módulo
 crear_tabla_users()

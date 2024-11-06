@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>Desencriptar Mensaje</h2>
+    <form action="{{ url_for('decrypt') }}" method="post">
+        <div>
+            <label for="encrypted_message">Mensaje Encriptado:</label>
+            <textarea id="encrypted_message" name="encrypted_message" required></textarea>
+        </div>
+        <div>
+            <label for="key_length">Longitud de la Clave (16, 24, 32):</label>
+            <select id="key_length" name="key_length" required>
+                <option value="16">16</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+            </select>
+        </div>
+        <div>
+            <label for="key_b64">Clave en Base64:</label>
+            <input type="text" id="key_b64" name="key_b64" required>
+        </div>
+        <div>
+            <label for="format_type">Formato del Mensaje Encriptado:</label>
+            <select id="format_type" name="format_type" required>
+                <option value="1">Base64</option>
+                <option value="2">Hexadecimal</option>
+                <option value="3">Binario</option>
+                <option value="4">Decimal</option>
+                <option value="5">Octal</option>
+            </select>
+        </div>
+        <button type="submit">Desencriptar</button>
+    </form>
+
+    {% if decrypted_message %}
+        <h3>Mensaje Desencriptado:</h3>
+        <p>{{ decrypted_message }}</p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('encryption') }}">Volver a Encriptar</a>
+</body>
+
+</html>
