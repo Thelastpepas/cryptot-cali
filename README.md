@@ -8,7 +8,7 @@ This project is a desktop application that allows encrypting and decrypting mess
 
 ## Current authors
 ____________________________  
--Yonatan Calimeño
+- Yonatan Calimeño
 - Andres soto
 
 ## Description
