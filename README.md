@@ -2,13 +2,14 @@
 ____________________________  
 This project is a desktop application that allows encrypting and decrypting messages using symmetric cryptographic algorithms. It is developed in Python using the Kivy framework for the graphical user interface (GUI).
 ## Previous Author
-Santiago Cano Ocampo
+ Anderson Monsalve Monsalve  
+- Juan Felipe Ruiz Yepes 
 
 
 ## Current authors
 ____________________________  
-- Anderson Monsalve Monsalve  
-- Juan Felipe Ruiz Yepes  
+-Yonatan Calimeño
+- Andres soto
 
 ## Description
 ____________________________  
@@ -45,25 +46,16 @@ ____________________________
 ____________________________  
 1. Clone this repository or download the source code.  
 2. Make sure you have Python 3.9.13 installed on your system.  
-3. Create a virtual environment and activate it:
 
-   ```bash
-   python -m venv venv
+
+
+##  Execution
+0. Install flash:
+
+ ```bash
+   pip install flask
    ```
-
-   For Windows:
-
-   ```bash
-   venv\Scripts\activate
-   ```
-
-   For Linux/Mac:
-
-   ```bash
-   source venv/bin/activate
-   ```
-
-## GUI Execution
+ 
 ____________________________  
 1. Install `pycryptodome`:
 
@@ -71,39 +63,23 @@ ____________________________
    pip install pycryptodome
    ```
 
-2. Run the main module:
+2. Run the main module using url:
 
    ```bash
    python app.py
    ```
 
-## Steps to run the code by cmd
+## Steps to run the code by urls
 - For the console we use
 ```bash
-python src/view/app.py
+python app.py
 ```
-- To run all tests in the test folder, use this command, it will find and run all test files
+- To run all tests in the test folder, use this command
   ```bash
-  python -m unittest discover -s test
+  python test/test_app.py
 
    ```
-```bash
-test_BD.py
-```
- ```bash
- test_crypto.py,
-```
-- use this to add your database
 
-```bash
-src/controller/SecretConfig.py
-
-   ```
-- If you are going to use the interface
-
-```bash
-python src/view/criptop.py
- ```
 
 ## database
 # install the following libraries:
